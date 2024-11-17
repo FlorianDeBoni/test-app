@@ -37,8 +37,8 @@ export default {
     };
   },
   created() {
-    // WebSocket connection setup
-    this.socket = new WebSocket("ws://localhost:8081");
+    // WebSocket connection setup wss://webserver-test-myxm.onrender.com or ws://localhost:8081
+    this.socket = new WebSocket("wss://webserver-test-myxm.onrender.com");
 
     this.socket.onmessage = (event) => {
       const data = JSON.parse(event.data);
