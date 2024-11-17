@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <h1>WebSocket Vue App</h1>
+    <h1>WebSocket Vue App (Insultons des Gens)</h1>
     <div>
       <input v-model="message" type="text" placeholder="Type a message" />
       <button @click="sendMessage">Send Message</button>
@@ -23,7 +23,7 @@ export default {
   },
   created() {
     // Connect to the WebSocket server hosted on wss://webserver-test-myxm.onrender.com or ws://localhost:8081
-    this.socket = new WebSocket('wss://webserver-test-myxm.onrender.com:8081'); 
+    this.socket = new WebSocket('wss://webserver-test-myxm.onrender.com'); 
 
     this.socket.onmessage = (event) => {
       // When the server sends a message back, we store it in the response variable
